@@ -19,13 +19,6 @@ namespace ReactCsvPeople.Data
             return context.People.ToList();
         }
 
-        public void Add(Person person)
-        {
-            using var context = new PeopleDataContext(_connectionString);
-            context.People.Add(person);
-            context.SaveChanges();
-        }
-
         public void DeleteAll()
         {
             using var context = new PeopleDataContext(_connectionString);
